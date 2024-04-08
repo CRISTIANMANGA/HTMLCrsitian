@@ -1,0 +1,94 @@
+body {
+    margin:0;
+    padding:0;
+    background: #FFF4EC;
+}
+
+.name {
+    width: 100%;
+    height: 300px;
+    background: #A0EADE;
+    transform: skewY(-5deg)
+}
+
+
+.name .contend {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 25%;    
+}
+
+
+.name .contend  .p-1{
+    color:#FFF4EC ;
+    font-family: Balu Tama 2;
+    font-weight: bolder;
+    font-size: 60px;
+    transform: skewY(5deg);
+    margin-bottom: 0;
+}
+
+.name .contend  .p-2{
+    color:#FFF4EC ;
+    font-family: Balu Tama 2;
+    font-size: 20px;
+    transform: skewY(5deg);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.name .img {
+    position: absolute;
+    top: 18%;
+    right: 5%;
+    width: 180px;
+    height:180px ;
+    border-radius: 100%;
+    transform: scaleY(5deg);
+    overflow: hidden;
+}
+.name .img img {
+    width: 180px;
+    height: 200px;
+
+
+
+}
+    
+
+.info{
+    width: 90%;
+    height: auto;
+    background: #A0EADE;
+    margin:5% auto; 
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.info .tituloseccion {
+    color: #FFF4EC;
+    font-family: value tama 2 sans-serif;
+    font-size:  xx-large;
+    text-align: center;
+    font-weight:bolder ;
+    border-bottom: 2px #FFF4EC solid;
+}
+
+.info .tituloinfo {
+    color: #FFF4EC;
+    font-family: value tama 2 sans-serif;
+    font-weight: bolder;
+    font-size: large;
+    display: inline;
+    margin-right: 20px;
+}
+
+.info .infoinfo {
+    color: #FFF4EC;
+    font-family: value tama 2 sans-serif;
+    font-weight: normal;
+    font-size: large;
+    display: inline
+}
+

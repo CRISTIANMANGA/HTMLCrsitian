@@ -1,0 +1,231 @@
+?><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            overflow-x: hidden; /* Ocultar la barra de desplazamiento horizontal */
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .formulario-container,
+        .tabla-container {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box; /* Incluye el padding en el ancho */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .formulario {
+            padding: 20px;
+            text-align: left; /* Alinear el texto a la izquierda */
+            border: none; /* Quitar el borde */
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            max-width: 300px; /* Ancho máximo para los campos de entrada */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            display: block;
+            padding: 10px 20px; /* Ajustar el relleno del botón */
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin-top: 20px; /* Espacio entre los campos de entrada y el botón */
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilos adicionales para la tabla */
+        .tabla {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .tabla-container {
+            margin-top: 40px; /* Ajustar margen superior */
+            margin-bottom: 40px; /* Ajustar margen inferior */
+            text-align: center; /* Centrar horizontalmente */
+        }
+
+        .acciones {
+            display: flex;
+            gap: 10px; /* Espacio entre iconos */
+        }
+
+        .acciones a {
+            text-decoration: none;
+        }
+
+        .acciones img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="formulario-container">
+        <div class="formulario">
+            <h1>Formulario de Contacto</h1>
+            <form action="#" method="POST">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+                <div>
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" name="dni" pattern="[0-9]{8}" title="El DNI debe contener 8 dígitos" required>
+                </div>
+                <div>
+                    <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                </div>
+                <div>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit">Enviar</button>
+
+        </form>
+
+        <div id="mensaje-enviado" style="display: none;">
+          <h2>Datos Enviados</h2>
+          <p>¡Tus datos han sido enviados correctamente!</p>
+        </div>
+      
+        <script>
+          document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Aquí se podría agregar el código para enviar los datos a un servidor
+            // Por ahora, simplemente mostramos el mensaje de datos enviados
+            document.getElementById('mensaje-enviado').style.display = 'block';
+          });
+        </script>
+      
+        </div>
+
+        <!-- Mostrar la tabla de contactos -->
+        <div class="tabla-container">
+    <h2>Registros de Contactos</h2>
+    <div class="tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>DNI</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Email</th>
+                    
+                </tr>
+            </thead>
+
+            <thead>
+                <tr>
+                    <th>Cristian</th>
+                    <th>Manga</th>
+                    <th>65004204</th>
+                    <th>20/11/2006</th>
+                    <th>miguelmana20@gmail.com</th>
+                   
+                </tr>
+            </thead>
+
+            <thead>
+                <tr>
+                    <th>Holman</th>
+                    <th>Galindo</th>
+                    <th>65004345</th>
+                    <th>12/03/2005</th>
+                    <th>holmangg@gmail.com</th>
+                    
+                </tr>
+            </thead>
+            
+            <thead>
+                <tr>
+                    <th>Pedro</th>
+                    <th>García</th>
+                    <th>64354345</th>
+                    <th>20/05/1999</th>
+                    <th>pedrogarci@gmail.com</th>
+                    
+                </tr>
+            </thead>
+            <thead>
+                <tr>
+                    <th>Camilo</th>
+                    <th>Zapata</th>
+                    <th>64378902</th>
+                    <th>17/12/1990</th>
+                    <th>camilito@gmail.com</th>
+                    
+                </tr>
+            </thead>   
+        </table>
+    </div>
+</div>
